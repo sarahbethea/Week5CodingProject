@@ -1,0 +1,69 @@
+package com.homework;
+
+public class AsteriskLogger implements Logger {
+	
+	String log;
+	
+	
+
+	@Override
+	public void log(String log) {
+		
+		
+	
+		StringBuilder logPrint = new StringBuilder();
+		
+		logPrint.append("***").append(log).append("***");
+		
+		System.out.println(logPrint.toString());
+		
+		
+	
+		
+		
+	}
+
+	@Override
+	public void error(String error) {
+	
+		
+		//top line
+		
+		int totalLength = 13 + error.length();
+				
+		StringBuilder asterisksRow = new StringBuilder();
+				
+		for (int i = 0; i < totalLength; i++) {
+			asterisksRow.append("*");
+		}
+		System.out.println(asterisksRow.toString());
+				
+				
+		//middle line
+				
+		StringBuilder middleRow = new StringBuilder();
+				
+		middleRow.append("***Error: ");
+		middleRow.append(error);
+		middleRow.append("***");
+				
+		System.out.println(middleRow.toString());
+				
+				
+				
+		//bottom line
+		int totalLengthBottom = 13 + error.length();
+				
+		StringBuilder asterisksRowBottom = new StringBuilder();
+				
+		for (int i = 0; i < totalLengthBottom; i++) {
+			asterisksRowBottom.append("*");
+		}
+		System.out.println(asterisksRowBottom.toString());
+				
+			
+	
+		
+	}
+
+}
