@@ -1,0 +1,20 @@
+package com.homework;
+
+public class App {
+
+	public static void main(String[] args) {
+	
+
+		Logger asteriskLogger = new AsteriskLogger();
+		asteriskLogger.log("Puppy");
+		asteriskLogger.error("Dinosaur");
+		
+		Logger spacedLogger = new SpacedLogger();
+		spacedLogger.log("Dog");
+		spacedLogger.error("Giraffe");
+			
+		
+		
+	}
+
+}
