@@ -1,0 +1,45 @@
+package com.homework;
+
+public class SpacedLogger implements Logger {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void log(String log) {
+		
+		
+		StringBuilder logPrintSpaced = new StringBuilder();
+		
+		for (int i = 0; i < log.length(); i++) {
+			logPrintSpaced.append(log.charAt(i)).append(" ");
+			
+		}
+		
+		System.out.println(logPrintSpaced.toString());
+		
+		
+		
+	}
+
+	@Override
+	public void error(String error) {
+		
+		StringBuilder errorMessageSpaced = new StringBuilder();
+		
+		for (int i = 0; i < error.length(); i++) {
+			errorMessageSpaced.append(error.charAt(i)).append(" ");
+			
+		}
+		
+		System.out.println("ERROR: " + errorMessageSpaced.toString());
+		
+		
+		
+		
+		
+	}
+
+}
